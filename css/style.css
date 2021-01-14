@@ -94,7 +94,7 @@ img {
     right: -1px;
     top: 0;
     font-family: 'EtModules' !important;
-    transform: initial!important;
+    transform: initial !important;
     color: #fff;
     cursor: pointer;
 }
@@ -106,7 +106,7 @@ img {
     right: -11px;
     top: -7px;
     font-family: 'EtModules' !important;
-    transform: initial!important;
+    transform: initial !important;
     color: #fff;
     cursor: pointer;
 }
@@ -206,19 +206,23 @@ img {
 }
 
 .category-img-1 {
-    height: 86px;
+    width: 16vw;
+    height: 4.5vw;
 }
 
 .category-img-2 {
-    height: 62px;
+    width: 15vw;
+    height: 3.2vw;
 }
 
 .category-img-3 {
-    height: 80px;
+    width: 11.4vw;
+    height: 4.2vw;
 }
 
 .category-img-4 {
-    height: 38px;
+    width: 15.7vw;
+    height: 2vw;
 }
 
 .category-navigation_mobile {
@@ -410,6 +414,14 @@ img {
 
     .product-cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+
+    .category-navigation {
+        padding-top: 52px;
     }
 
 }
