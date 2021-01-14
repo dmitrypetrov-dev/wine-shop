@@ -10,6 +10,18 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+@font-face {
+    font-family: ETmodules;
+    src: url(../fonts/modules.eot);
+    src: url(../fonts/modules.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/modules.ttf) format("truetype"),
+    url(../fonts/modules.woff) format("woff"),
+    url(../fonts/modules.svg#ETmodules) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 24px;
@@ -67,12 +79,46 @@ img {
 }
 
 .header-nav_link:hover {
-    opacity: .8;
+    opacity: .7;
+}
+
+.shopping-cart,
+.burger-menu {
+    position: relative;
+}
+
+.shopping-cart::after {
+    position: absolute;
+    content: "\e015";
+    font-size: 25px;
+    right: -1px;
+    top: 0;
+    font-family: 'EtModules' !important;
+    transform: initial!important;
+    color: #fff;
+    cursor: pointer;
+}
+
+.burger-menu::after {
+    position: absolute;
+    content: "\61";
+    font-size: 40px;
+    right: -11px;
+    top: -7px;
+    font-family: 'EtModules' !important;
+    transform: initial!important;
+    color: #fff;
+    cursor: pointer;
 }
 
 .header-nav_item {
     display: flex;
     position: relative;
+}
+
+.header-nav_item:hover .burger-menu::after,
+.header-nav_item:hover .shopping-cart::after {
+    opacity: .7;
 }
 
 .header-nav_item:first-child {
