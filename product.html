@@ -18,11 +18,11 @@
                     <ul class="header-nav_menu">
                         <li class="header-nav_item">
                             <a class="header-nav_link" href="#!">Cart</a>
-                            <div><img src="img/shopping-cart.svg" alt=""></div>
+                            <div class="shopping-cart"></div>
                         </li>
                         <li class="header-nav_item">
                             <a class="header-nav_link" href="#!">Menu</a>
-                            <div><img src="img/burger.svg" alt=""></div>
+                            <div class="burger-menu"></div>
                             <ul class="header-dropdown">
                                 <li class="header-dropdown_item"><a class="header-dropdown_link" href="index.html">Storefront</a></li>
                                 <li class="header-dropdown_item">Wines:</li>
@@ -86,19 +86,29 @@
             </div>
         </div>
         <div class="product">
-            <div class="bread-crumbs_mobile">
-                <a class="bread-crumbs_link" href="index.html">our wines</a>
-                <img src="img/arrow-icon-2.png" alt="">
-                <a class="bread-crumbs_link current" href="#!">current category</a>
-            </div>
+            <nav class="breadcrumbs-mobile">
+                <ul class="breadcrumbs-list">
+                    <li>
+                        <a class="breadcrumbs-link" href="index.html">our wines</a>
+                    </li>
+                    <li>
+                        <span class="breadcrumbs-item">current category</span>
+                    </li>
+                </ul>
+            </nav>
             <div class="container">
                 <div class="products-wrapper">
                     <aside class="sidebar">
-                        <div class="bread-crumbs">
-                            <a class="bread-crumbs_link" href="index.html">our wines</a>
-                            <img src="img/arrow-icon-2.png" alt="">
-                            <a class="bread-crumbs_link current" href="#!">current category</a>
-                        </div>
+                        <nav class="breadcrumbs">
+                            <ul class="breadcrumbs-list">
+                                <li>
+                                    <a class="breadcrumbs-link" href="index.html">our wines</a>
+                                </li>
+                                <li>
+                                    <span class="breadcrumbs-item">current category</span>
+                                </li>
+                            </ul>
+                        </nav>
                         <div class="search">
                             <form class="search-form" action="#!" method="GET">
                                 <input class="search-field" type="text" name="search-value">
