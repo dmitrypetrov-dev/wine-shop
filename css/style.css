@@ -293,6 +293,7 @@ img {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-row-gap: 50px;
+    grid-column-gap: 40px;
 }
 
 .product-img {
@@ -682,11 +683,6 @@ img {
         width: 100%;
         top: 40px;
         left: 40px;
-        overflow: auto;
-    }
-
-    .breadcrumbs-list {
-        white-space: nowrap;
     }
 
     .breadcrumbs-list li:last-child {
@@ -709,6 +705,16 @@ img {
 
     .current-amount input:first-child {
         margin-right: 10px;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+
+    .breadcrumbs-list {
+        white-space: nowrap;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
 }
