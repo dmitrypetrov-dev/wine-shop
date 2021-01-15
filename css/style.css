@@ -624,7 +624,6 @@ img {
 }
 
 .breadcrumbs-list li:last-child {
-    padding: 0;
     margin: 0;
     background: none;
 }
