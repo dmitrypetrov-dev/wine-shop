@@ -144,10 +144,14 @@ img {
     z-index: 1;
 }
 
-.header-nav_item:last-child:hover .header-dropdown {
-    opacity: 1;
-    visibility: visible;
+@media not all and (pointer: coarse) {
+    #burger-open:hover .header-dropdown {
+        opacity: 1;
+        visibility: visible;
+    }
 }
+
+
 
 .header-dropdown_item {
     font-size: 24px;
@@ -197,35 +201,23 @@ li.header-dropdown_item.header-dropdown_separator {
     width: 100%;
     height: 160px;
     background-color: #ebebeb;
-    padding-top: 34px;
 }
 
 .category-navigation_wrapper {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.category-img-1 {
-    width: 16vw;
-    height: 4.5vw;
+.category-navigation_link {
+    display: inline-flex;
+    width: 25%;
 }
 
-.category-img-2 {
-    width: 15vw;
-    height: 3.2vw;
-}
-
-.category-img-3 {
-    width: 11.4vw;
-    height: 4.2vw;
-}
-
-.category-img-4 {
-    width: 15.7vw;
-    height: 2vw;
+.category-img {
+    width: 100%;
+    height: 100%;
 }
 
 .category-navigation_mobile {
@@ -439,15 +431,20 @@ li.header-dropdown_item.header-dropdown_separator {
 }
 
 
-@media screen and (min-width: 481px) and (max-width: 980px) {
+@media screen and (max-width: 980px) {
+
+    .header-dropdown.active {
+        opacity: 1;
+        visibility: visible;
+    }
 
      .products .container{
-         padding:0px;
+         padding: 0;
      }
 
      .product-cards {
         grid-template-columns: auto auto;
-        margin-auto;
+
     }
  
     input::-webkit-inner-spin-button {
@@ -608,28 +605,42 @@ li.header-dropdown_item.header-dropdown_separator {
     position: relative;
 }
 
-.bread-crumbs_mobile {
+.breadcrumbs-mobile {
     display: none;
 }
 
-.bread-crumbs {
+.breadcrumbs {
     position: absolute;
-    width: 115%;
     top: -98px;
     left: 0;
+    width: 300%;
+    max-width: 400%;
+}
+
+.breadcrumbs-list {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.bread-crumbs img {
-    height: 14px;
+.breadcrumbs-list li {
+    padding: 0 40px 0 0;
+    margin: 0 30px 0 0;
+    background: url(../img/arrow-icon-2.png) center right no-repeat;
 }
 
-.bread-crumbs_link {
+.breadcrumbs-list li:last-child {
+    margin: 0;
+    background: none;
+}
+
+.breadcrumbs-link {
     font-family: 'Open Sans', sans-serif;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
@@ -638,8 +649,16 @@ li.header-dropdown_item.header-dropdown_separator {
     text-decoration: none;
 }
 
-.bread-crumbs_link.current {
+.breadcrumbs-item {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
     color: darkred;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 .product-card_current {
@@ -677,14 +696,21 @@ li.header-dropdown_item.header-dropdown_separator {
 
 @media screen and (max-width: 980px) {
 
-    .bread-crumbs_mobile {
-        display: flex;
+    .product-img:hover .product-img_wrapper,
+    .product-img:hover .product-img_link {
+        display: none;
+    }
+
+    .breadcrumbs-mobile {
+        display: block;
         position: absolute;
-        width: 460px;
+        width: 100%;
         top: 40px;
         left: 40px;
-        justify-content: space-between;
-        align-items: center;
+    }
+
+    .breadcrumbs-list li:last-child {
+        padding-right: 70px;
     }
 
     .product-card_current {
@@ -704,19 +730,10 @@ li.header-dropdown_item.header-dropdown_separator {
 }
 
 @media screen and (max-width: 540px) {
-    .bread-crumbs_mobile {
-        width: 430px;
+    .breadcrumbs-list {
+        white-space: nowrap;
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
-@media screen and (max-width: 480px) {
-
-    .bread-crumbs_mobile {
-        width: 100%;
-        left: 20px;
-    }
-
-    .bread-crumbs_link {
-        font-size: 18px;
-    }
-}
