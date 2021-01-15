@@ -20,7 +20,7 @@
 	                            <a class="header-nav_link" href="#!">Cart</a>
 	                            <div class="shopping-cart"></div>
 	                        </li>
-	                        <li class="header-nav_item">
+	                        <li class="header-nav_item" id="burger-open">
 	                            <a class="header-nav_link" href="#!">Menu</a>
 	                            <div class="burger-menu"></div>
 	                           <ul class="header-dropdown">
@@ -49,12 +49,16 @@
             </div>
         </div>
         <div class="category-navigation">
-            <div class="container">
                 <div class="category-navigation_wrapper">
-                    <a href="#!"><img class="category-img-1" src="img/category-1.png" alt="Tasting Barn"></a>
-                    <a href="#!"><img class="category-img-2" src="img/category-2.png" alt="Prime Solum"></a>
-                    <a href="#!"><img class="category-img-3" src="img/category-3.png" alt="Tetra"></a>
-                    <a href="#!"><img class="category-img-4" src="img/category-4.png" alt="Expression 38"></a>
+                    <a class="category-navigation_link" href="#!"><img class="category-img-1 category-img"
+                                                                       src="img/tasting-barn.png" alt="Tasting Barn"></a>
+                    <a class="category-navigation_link" href="#!"><img class="category-img-2 category-img"
+                                                                       src="img/prime-solum.png" alt="Prime Solum"></a>
+                    <a class="category-navigation_link" href="#!"><img class="category-img-3 category-img"
+                                                                       src="img/tetra.png" alt="Tetra"></a>
+                    <a class="category-navigation_link" href="#!"><img class="category-img-4 category-img"
+                                                                       src="img/expression-wine.png"
+                                                                       alt="Expression 38"></a>
                 </div>
                 <div class="category-navigation_mobile">
                     <div class="wine-menu">Wine Menu</div>
@@ -83,22 +87,31 @@
                         </nav>
                     </div>
                 </div>
-            </div>
         </div>
         <div class="product">
-            <div class="bread-crumbs_mobile">
-                <a class="bread-crumbs_link" href="index.html">our wines</a>
-                <img src="img/arrow-icon-2.png" alt="">
-                <a class="bread-crumbs_link current" href="#!">current category</a>
-            </div>
+            <nav class="breadcrumbs-mobile">
+                <ul class="breadcrumbs-list">
+                    <li>
+                        <a class="breadcrumbs-link" href="index.html">our wines</a>
+                    </li>
+                    <li>
+                        <span class="breadcrumbs-item">current category</span>
+                    </li>
+                </ul>
+            </nav>
             <div class="container">
                 <div class="products-wrapper">
                     <aside class="sidebar">
-                        <div class="bread-crumbs">
-                            <a class="bread-crumbs_link" href="index.html">our wines</a>
-                            <img src="img/arrow-icon-2.png" alt="">
-                            <a class="bread-crumbs_link current" href="#!">current category</a>
-                        </div>
+                        <nav class="breadcrumbs">
+                            <ul class="breadcrumbs-list">
+                                <li>
+                                    <a class="breadcrumbs-link" href="index.html">our wines</a>
+                                </li>
+                                <li>
+                                    <span class="breadcrumbs-item">current category</span>
+                                </li>
+                            </ul>
+                        </nav>
                         <div class="search">
                             <form class="search-form" action="#!" method="GET">
                                 <input class="search-field" type="text" name="search-value">
