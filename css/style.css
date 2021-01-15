@@ -588,28 +588,43 @@ img {
     position: relative;
 }
 
-.bread-crumbs_mobile {
+.breadcrumbs-mobile {
     display: none;
 }
 
-.bread-crumbs {
+.breadcrumbs {
     position: absolute;
-    width: 115%;
     top: -98px;
     left: 0;
+    width: 300%;
+    max-width: 400%;
+}
+
+.breadcrumbs-list {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.bread-crumbs img {
-    height: 14px;
+.breadcrumbs-list li {
+    padding: 0 40px 0 0;
+    margin: 0 30px 0 0;
+    background: url(../img/arrow-icon-2.png) center right no-repeat;
 }
 
-.bread-crumbs_link {
+.breadcrumbs-list li:last-child {
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+
+.breadcrumbs-link {
     font-family: 'Open Sans', sans-serif;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
@@ -618,8 +633,16 @@ img {
     text-decoration: none;
 }
 
-.bread-crumbs_link.current {
+.breadcrumbs-item {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
     color: darkred;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 .product-card_current {
@@ -661,14 +684,22 @@ img {
 
 @media screen and (max-width: 980px) {
 
-    .bread-crumbs_mobile {
-        display: flex;
+    .product-img:hover .product-img_wrapper,
+    .product-img:hover .product-img_link {
+        display: none;
+    }
+
+    .breadcrumbs-mobile {
+        display: block;
         position: absolute;
-        width: 460px;
+        width: 100%;
         top: 40px;
         left: 40px;
-        justify-content: space-between;
-        align-items: center;
+        overflow: auto;
+    }
+
+    .breadcrumbs-list {
+        white-space: nowrap;
     }
 
     .product-card_current {
@@ -691,20 +722,8 @@ img {
 
 }
 
-@media screen and (max-width: 540px) {
-    .bread-crumbs_mobile {
-        width: 430px;
-    }
-}
 
 @media screen and (max-width: 480px) {
 
-    .bread-crumbs_mobile {
-        width: 340px;
-        left: 20px;
-    }
 
-    .bread-crumbs_link {
-        font-size: 18px;
-    }
 }
