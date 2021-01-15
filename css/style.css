@@ -142,9 +142,11 @@ img {
     transition: all .3s linear;
 }
 
-.header-nav_item:last-child:hover .header-dropdown {
-    opacity: 1;
-    visibility: visible;
+@media not all and (pointer: coarse) {
+    #burger-open:hover .header-dropdown {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 .header-dropdown_item {
@@ -434,7 +436,13 @@ img {
 
 }
 
+
 @media screen and (max-width: 980px) {
+
+    .header-dropdown.active {
+        opacity: 1;
+        visibility: visible;
+    }
 
     input::-webkit-inner-spin-button {
         appearance: none;
