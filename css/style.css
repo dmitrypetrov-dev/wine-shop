@@ -412,10 +412,6 @@ li.header-dropdown_item.header-dropdown_separator {
     height: 57px;
 }
 
-.product-img img {
- 	   max-height: 300px;
-	}
-
 /*Media queries*/
 
 @media screen and (min-width:1281px) {
@@ -665,6 +661,10 @@ li.header-dropdown_item.header-dropdown_separator {
     display: flex;
 }
 
+.product-wrapper {
+    max-width: 646px;
+    flex-shrink: 2;
+}
 
 .current-name {
     font-family: 'Open Sans', sans-serif;
